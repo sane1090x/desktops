@@ -13,10 +13,27 @@
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+
+    <script defer>
+      (function () {
+        var fontLink = document.createElement("link");
+        fontLink.href =
+          "https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";
+        fontLink.rel = "stylesheet";
+        fontLink.media = "print"; // Load in a non-blocking way
+        fontLink.onload = function () {
+          fontLink.media = "all"; // Apply the font after it's loaded
+        };
+        document.head.appendChild(fontLink);
+      })();
+    </script>
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      />
+    </noscript>
   </head>
 
   <body class="mb-2">
